@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="intern_1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'intern_1.dbo.nepali' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="nepali">
+    <Key>
+      <PropertyRef Name="नाम" />
+      <PropertyRef Name="ठेगाना" />
+    </Key>
+    <Property Name="नाम" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="ठेगाना" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="intern_1ModelStoreContainer">
+    <EntitySet Name="nepali" EntityType="Self.nepali" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [nepali].[नाम] AS [नाम], 
+    [nepali].[ठेगाना] AS [ठेगाना]
+    FROM [dbo].[nepali] AS [nepali]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

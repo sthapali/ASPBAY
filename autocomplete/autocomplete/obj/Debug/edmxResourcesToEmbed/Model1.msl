@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="intern_1ModelStoreContainer" CdmEntityContainer="intern_1Entities">
+    <EntitySetMapping Name="nepalis">
+      <EntityTypeMapping TypeName="intern_1Model.nepali">
+        <MappingFragment StoreEntitySet="nepali">
+          <ScalarProperty Name="न_म" ColumnName="नाम" />
+          <ScalarProperty Name="ठ_ग_न_" ColumnName="ठेगाना" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

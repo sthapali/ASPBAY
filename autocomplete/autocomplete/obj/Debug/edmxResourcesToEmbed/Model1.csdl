@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="intern_1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="nepali">
+    <Key>
+      <PropertyRef Name="न_म" />
+      <PropertyRef Name="ठ_ग_न_" />
+    </Key>
+    <Property Name="न_म" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ठ_ग_न_" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="intern_1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="nepalis" EntityType="Self.nepali" />
+  </EntityContainer>
+</Schema>

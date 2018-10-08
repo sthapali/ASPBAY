@@ -1,0 +1,33 @@
+﻿
+<script src="~/Scripts/jquery-ui.js"></script>
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+<div>
+    <label>Name Search</label>
+    <input class="form-control" id="searchInput"/>
+</div>
+<script>
+    $("#searchInput").autocomplete({
+
+        source: function (request, response) {
+            alert("s");
+            $.ajax({
+                url: '@Url.Action("GetSearchValue","Home")',
+                dataType: "json",
+                data: { search: $("#searchInput").val() },
+                success: function (data) {
+                    response($.map(data, function (item) {
+                        
+                        //alert(item.न_म);
+                        return
+                        { label: item.न_म; value: item.न_म}
+                    }));
+                },
+                error: function (xhr, stautus, error) {
+                    alert("Error");
+                }
+            });
+        }
+
+    });
+</script>
+
