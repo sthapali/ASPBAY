@@ -1,0 +1,152 @@
+﻿@*@Model IEnumerable<gridviewmvc.palientities>
+
+    @{
+        ViewBag.Title = "Index";
+        WebGrid grid = new WebGrid(Model);
+    }
+
+
+    <h2>Index</h2>
+
+   
+    @grid.GetHtml(columns: new[]{
+        grid.Column("ID"),
+         grid.Column("Name"),
+    grid.Column("Address")
+});*@
+
+
+@model List<GridviewMVC.test>
+
+@{
+    Layout = null;
+    var grid = new WebGrid(canPage: true, rowsPerPage: 10);
+    grid.Bind(source: Model, rowCount: ViewBag.TotalRows, autoSortAndPage: false);
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <meta name="description" content="The description of my page" />
+</head>
+<body>
+    <div class="container">
+      
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                   @* <a href="#" class="navbar-brand"></a>*@
+                </div>
+                <div>
+                    @using (Html.BeginForm("index", "home", FormMethod.Get, new { @class = "navbar-form navbar-vertical" }))
+                    {
+                        <div align:"justify">
+                            <div class="form-row" style="margin-right: 460px">
+                                <button type="submit" name="search" value="क" class="form-row" placeholder="क" style="margin-right: 5px;">क</button>
+                                <button type="submit" name="search" value="ख" class="form-row" placeholder="ख" style="margin-right: 5px;">ख</button>
+                                <button type="submit" name="search" value="ग" class="form-row" placeholder="ग" style="margin-right: 5px;">ग</button>
+                                <button type="submit" name="search" value="घ" class="form-row" placeholder="घ" style="margin-right: 5px;">घ</button>
+                                <button type="submit" name="search" value="ङ" class="form-row" placeholder="ङ" style="margin-right: 5px;">ङ</button>
+                                <button type="submit" name="search" value="च" class="form-row" placeholder="च" style="margin-right: 5px;">च</button>
+                                <button type="submit" name="search" value="छ" class="form-row" placeholder="छ" style="margin-right: 5px;">छ</button>
+                                <button type="submit" name="search" value="ज" class="form-row" placeholder="ज" style="margin-right: 5px;">ज</button>
+                                <button type="submit" name="search" value="झ" class="form-row" placeholder="झ" style="margin-right: 5px;">झ</button>
+                                <button type="submit" name="search" value="ञ" class="form-row" placeholder="ञ" style="margin-right: 5px;">ञ</button>
+                            </div>
+                            <div class="form-row">
+                                <button type="submit" name="search" value="ट" class="form-row" placeholder="ट" style="margin-right: 5px;">ट</button>
+                                <button type="submit" name="search" value="ठ" class="form-row" placeholder="ठ" style="margin-right: 5px;">ठ</button>
+                                <button type="submit" name="search" value="ड" class="form-row" placeholder="ड" style="margin-right: 5px;">ड</button>
+                                <button type="submit" name="search" value="ढ" class="form-row" placeholder="ढ" style="margin-right: 5px;">ढ</button>
+                                <button type="submit" name="search" value="ण" class="form-row" placeholder="ण" style="margin-right: 5px;">ण</button>
+                                <button type="submit" name="search" value="त" class="form-row" placeholder="त" style="margin-right: 5px;">त</button>
+                                <button type="submit" name="search" value="थ" class="form-row" placeholder="थ" style="margin-right: 5px;">थ</button>
+                                <button type="submit" name="search" value="द" class="form-row" placeholder="द" style="margin-right: 5px;">द</button>
+                                <button type="submit" name="search" value="ध" class="form-row" placeholder="ध" style="margin-right: 5px;">ध</button>
+                                <button type="submit" name="search" value="न" class="form-row" placeholder="न" style="margin-right: 5px;">न</button>
+                            </div>
+                            <div class="form-row">
+                                <button type="submit" name="search" value="प" class="form-row" placeholder="प" style="margin-right: 5px;">प</button>
+                                <button type="submit" name="search" value="फ" class="form-row" placeholder="फ" style="margin-right: 5px;">फ</button>
+                                <button type="submit" name="search" value="ब" class="form-row" placeholder="ब" style="margin-right: 5px;">ब</button>
+                                <button type="submit" name="search" value="भ" class="form-row" placeholder="भ" style="margin-right: 5px;">भ</button>
+                                <button type="submit" name="search" value="म" class="form-row" placeholder="म" style="margin-right: 5px;">म</button>
+                                <button type="submit" name="search" value="य" class="form-row" placeholder="य" style="margin-right: 5px;">य</button>
+                                <button type="submit" name="search" value="र" class="form-row" placeholder="र" style="margin-right: 5px;">र</button>
+                                <button type="submit" name="search" value="ल" class="form-row" placeholder="ल" style="margin-right: 5px;">ल</button>
+                                <button type="submit" name="search" value="व" class="form-row" placeholder="व" style="margin-right: 5px;">व</button>
+                                <button type="submit" name="search" value="श" class="form-row" placeholder="श" style="margin-right: 5px;">श</button>
+                            </div>
+                            <div class="form-row">
+                                <button type="submit" name="search" value="ष" class="form-row" placeholder="ष" style="margin-right: 5px;">ष</button>
+                                <button type="submit" name="search" value="स" class="form-row" placeholder="स" style="margin-right: 5px;">स</button>
+                                <button type="submit" name="search" value="ह" class="form-row" placeholder="ह" style="margin-right: 5px;">ह </button>
+                                <button type="submit" name="search" value="क्ष" class="form-row" placeholder="क्ष" style="margin-right: 5px;">क्ष</button>
+                                <button type="submit" name="search" value="ऋ" class="form-row" placeholder="ऋ" style="margin-right: 5px;">ऋ</button>
+                                <button type="submit" name="search" value="ज्ञ" class="form-row" placeholder="ज्ञ" style="margin-right: 5px;">ज्ञ</button>
+                                <button type="submit" name="search" value="अ" class="form-row" placeholder="अ" style="margin-right: 5px;">अ</button>
+                                <button type="submit" name="search" value="इ" class="form-row" placeholder="इ" style="margin-right: 5px;">इ</button>
+                                <button type="submit" name="search" value="उ" class="form-row" placeholder="उ" style="margin-right: 5px;">उ</button>
+                                <button type="submit" name="search" value="ए" class="form-row" placeholder="ए" style="margin-right: 5px;">ए</button>
+                            </div>
+                        </div>
+
+
+
+
+                        <br/>
+                        
+                        
+   
+
+                    }
+                </div>
+            </div>
+        </nav>
+        <div>
+            @grid.Table(
+                tableStyle: "table table-bordered",
+                columns: grid.Columns(
+                    grid.Column(columnName: "ID", header: "ID"),
+                    grid.Column(columnName: "Name", header: "Name"),
+                    grid.Column(columnName: "Address", header: "Address")
+
+                )
+            )
+                
+                <div class="row">
+                  <div class="col-sm-6">
+                     </div>
+                        </div>
+
+                        @Html.Hidden("dir", grid.SortDirection)
+                        @Html.Hidden("col", grid.SortColumn)
+
+                    </div>
+                </div>
+                            <script src="~/Scripts/jquery-3.1.1.js"></script>
+                            <script src="~/Scripts/bootstrap.min.js"></script>
+                           @*  <script>
+                                $(function () {
+                                     try {
+                   var dir = $('#dir').val();
+                   var col = $('#col').val();
+                   var header = $("th a[href*=" + col + "]");
+                   if (dir == "Ascending") {
+                       header.text(header.text() + "  ▲")
+                   }
+                   if (dir == "Descending") {
+                       header.text(header.text() + "  ▼");
+                   }
+
+               } catch (e) {
+
+               }
+           })
+                            </script>*@
+                        </body>
+                        </html>
